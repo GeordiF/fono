@@ -1,0 +1,409 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//colors 
+$pc: #0c3145; //primary
+$pcd: darken( $pc, 5% ); 
+$tc: #FFFFFF; //text color
+
+//Fonts
+$fsl: 60px;
+$fsm: 30px; 
+$fss: 20px;
+
+$bold: 700; 
+$regular: 400; 
+$light: 300k; 
+
+//logo
+$lw: 15em; 
+
+//Buttons
+$bb: 400px; 
+$mb: 320px; 
+$sb: 240px; 
+$xsb: 160px; 
+$xxsb: 80px;
+
+//BorderWidth
+$bw: 5px; 
+
+//min-width Div List
+$mw: 250px; 
+
+html, body {
+  height: 100%; 
+}
+
+body {
+  background-color:$pc; 
+  font-family: 'Comfortaa', cursive;
+  font-weight: $light; 
+  z-index: -2; 
+  color: $tc;
+  width: 100%;
+}
+
+.logo {
+  width: $lw; 
+  text-align: center; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding-top: 1em; //2.5em;
+  padding-bottom: 1em;  
+}
+
+.logo img{
+  width: 100%; 
+}
+
+.content {
+  //background-image: url('/img/Vinyl-banner.jpg');
+  overflow: hidden; 
+  position: relative; 
+  background-size: auto 100%;
+  background-repeat: no-repeat; 
+  width: 100%; 
+  height: 100vh; 
+  
+}
+
+.innerContent {
+  width: 80%; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.content h1, .content h3, .content p, .middleContent h1, .middleContent h3, .middleContent p, .bottomContent h1, .bottomContent h3, .bottomContent p, .team h1, .socials h1, .formulas h1, .formulas h3, .formulas p, .error h1 {
+  text-align: center; 
+}
+
+.content h1, .middleContent h1, .bottomContent h1, .team h1, .socials h1, .formulas h1, .error h1{
+  font-weight: $bold;  
+  font-size: $fsl; 
+}
+
+.content h3, .formulas h3{
+  font-size: $fsm;
+  font-weight: $bold; 
+  margin-top: 2.5em; 
+}
+
+.middleContent p, .bottomContent p, .team p, .formulas p {
+  font-size: $fss;
+}
+
+.topContent {
+  margin-top: 10em; 
+  overflow: hidden; 
+  position: relative; 
+}
+
+.topContent .buttonContainer {
+  margin-top: 10%; 
+}
+
+video {
+  overflow: hidden;
+  //height: 100%;
+  //width: 100%;
+  position: absolute; 
+  z-index: -1; 
+  top: 50%;
+  left: 50%; 
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.middleContent, .bottomContent, .team, .socials, .formulas{
+  background-image: url('/img/banner.jpg');
+  background-repeat: none; 
+  background-size: cover; 
+  width: 100%;
+  padding-top: 5%; 
+  padding-bottom: 5%; 
+  padding-left: 10%; 
+  padding-right:  10%; 
+}
+
+.middleContent {
+  margin-top: 5em;
+}
+
+.buttonContainer {
+  width: $bb;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 2em; 
+  text-align: center; 
+}
+
+.buttonContainer a {
+  width: 100%; 
+  height: 100%;
+  padding: 5%;
+  font-size: $fsm;
+  font-weight: $bold;  
+  text-decoration: none;
+  color: $tc; 
+  border: solid $bw $tc;
+  display: inline-block;  
+  transition: all 0.2s ease-in;
+}
+
+.buttonContainer a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav{
+  background-color: $pc; 
+  position: fixed;
+  width: 100%;
+ top: 0;
+}
+
+.nav .logo {
+  padding-top: 1em; 
+  padding-bottom: 1em;
+  width: $lw/2; 
+  margin: 0;
+  margin-left: 10%; 
+}
+
+.navmenu {
+  margin-left: auto;
+  margin-top: auto; 
+  margin-right: 10%;
+  font-weight: $bold;
+}
+
+.navmenu a{
+  padding: 0.5em; 
+  margin: 0.5em; 
+  width: 5em; 
+  text-align: center; 
+  vertical-align: middle; 
+  display: inline-block;
+  text-decoration: none;
+  font-size: $fss; 
+  color: $tc; 
+  border-radius: 15px;
+  transition: 0.2s;
+}
+
+.navmenu a:hover {
+  background-color: $pcd; 
+}
+
+.middleContent p, .bottomContent p {
+  margin-top: 2em; 
+}
+
+.middleContent .buttonContainer a{
+  width: 100%;
+  font-size: $fss; 
+  margin-left: auto; 
+  margin-right: auto;
+  text-align: center; 
+}
+
+.bottomContent {
+  background-image: url('/img/vinyl.png'); 
+  background-repeat: no-repeat; 
+  background-position: center;
+  padding-top: 5%; 
+  background-size: auto 100%; 
+}
+
+.team {
+  background-image: url('/img/banner2.jpg');
+  background-repeat: none; 
+  background-size: cover;
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: center; 
+}
+
+.teamMember, .formula{
+  display: inline-block;
+  margin-top: 2em; 
+  margin-left: 1em;
+  margin-right: 1em; 
+  width: 20%;
+  min-width: $mw; 
+}
+
+.teamMember img {
+  width: 100%;
+  max-width: 200px; 
+  padding-bottom: 1em;
+  border-radius: 100%; 
+}
+
+.socials {
+  background-image: url('/img/banner3.jpg');  
+}
+
+.socials .social-links {
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: center; 
+ 
+}
+
+.socials .social-links a{
+  text-decoration: none;   
+}
+
+.socials .social-links i{
+  margin: $fsl;
+  display: inline-block;
+  vertical-align: top; 
+  font-size: $fsl*2;
+  color: $tc;
+  transition: all 0.1s ease-in;
+  
+}
+
+.socials .social-links i:hover{
+//color: darken($tc, 30%);
+font-size: $fsl*2.1;  
+margin: $fsl - 3px; 
+transition: all 0.2s ease-in; 
+}
+
+.navmenu .icon {
+    display: none;
+}
+
+.formulas {
+  background-image: none; 
+  text-align: center; 
+}
+
+.formulas ul {
+  padding: 0px; 
+}
+
+.formula {
+  display: inline-block; 
+  vertical-align: top; 
+  background-color: $pcd; 
+  border: solid $bw $tc;  
+  width: 25%;
+  height: 320px; 
+  min-width: $mw;
+  position: relative; 
+  z-index: -1;
+}
+
+.formula h3 {
+  margin-top: 1em; 
+}
+
+.formula p:last-child{
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+hr {
+  border-top: solid $bw $tc; 
+}
+
+.error h1 {
+  margin-top: 15%; 
+}
+
+.errorButton {
+  margin-top: 15em; 
+}
+
+@media only screen and (max-width: 930px){
+
+    .navmenu {
+      width: 100%;
+      margin-left: auto; 
+      margin-right: auto;
+    }
+    .navmenu a{
+      display: none; 
+      float: left;  
+      text-align: center; 
+      padding: 14px 16px;
+    }
+
+    .navmenu a.icon{ 
+      display: block;
+      width: 3em;
+      height: 2em;
+      padding: 5px 5px; 
+      position: absolute;
+      right: 0;
+      top: 0; 
+            
+    }
+    .navmenu.responsive a {
+      float: none;
+      width: 95%; 
+      border-radius: 0px; 
+      display: block;
+    }
+
+    .navmenu.responsive a.icon {
+      display: block;
+      width: 3em;
+      border-radius: 15px; 
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+@media only screen and (min-width: 600px){
+  .hide{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .topContent {
+    margin-top: 20%; 
+  }
+  .topContent .buttonContainer {
+    margin-top: 35%; 
+    width: $sb; 
+  }
+
+  .topContent h1, .error h1{
+    font-size: $fsm; 
+  }
+
+  .topContent h3 {
+    font-size: $fss; 
+  }
+
+  .buttonContainer{
+    width: $sb; 
+  }
+
+  .buttonContainer a{
+    font-size: $fss; 
+  
+  }
+
+  .info h1 {
+    font-size: $fsm;
+    margin-top: 2em; 
+  }
+
+}
